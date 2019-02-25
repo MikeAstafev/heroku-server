@@ -6,16 +6,17 @@ import java.net.Socket;
 
 public class HttpsServer
 {
-    static int PORT = 1337;
+    static int port = Integer.parseInt(System.getenv("PORT"));
     public static void main(String[] args) throws Throwable {
         //try to create server with port '8080'
         ServerSocket server = null;
+
         //creating server socket on port 8080
         try {
-            server = new ServerSocket(PORT, 0);
+            server = new ServerSocket(port, 0);
             System.out.println("Server started on port: " + server.getLocalPort() + "\n");
         } catch (IOException ex) {
-            System.out.println("Port " + PORT + " is blocked.");
+            System.out.println("Port " + port + " is blocked.");
             System.exit(-1);
         }
         //new step - waiting for clients
