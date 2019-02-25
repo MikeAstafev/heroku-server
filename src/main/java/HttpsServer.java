@@ -10,10 +10,11 @@ public class HttpsServer
     public static void main(String[] args) throws Throwable {
         //try to create server with port '8080'
         ServerSocket server = null;
-
+        System.out.println(System.getenv("$PORT"));
+        System.out.println(port);
         //creating server socket on port 8080
         try {
-            server = new ServerSocket(port, 0);
+            server = new ServerSocket(8080, 0);
             System.out.println("Server started on port: " + server.getLocalPort() + "\n");
         } catch (IOException ex) {
             System.out.println("Port " + port + " is blocked.");
