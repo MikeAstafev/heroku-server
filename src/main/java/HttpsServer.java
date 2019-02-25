@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class HttpsServer
 {
-    static int PORT = 8080;
+    static int PORT = 1337;
     public static void main(String[] args) throws Throwable {
         //try to create server with port '8080'
         ServerSocket server = null;
