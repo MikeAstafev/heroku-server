@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="server:jar">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="server.jar">
+      <element id="module-output" name="server" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/javolution/javolution/5.2.3/javolution-5.2.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jscience/jscience/4.3.1/jscience-4.3.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
