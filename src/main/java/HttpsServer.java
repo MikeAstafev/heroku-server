@@ -2,6 +2,7 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Properties;
 
 
 public class HttpsServer
@@ -9,6 +10,10 @@ public class HttpsServer
     static int port = Integer.parseInt(System.getenv("$PORT"));
     public static void main(String[] args) throws Throwable {
         //try to create server with port '8080'
+        Properties prop = new Properties();
+        String str = prop.getProperty("PORT");
+        System.out.println(str);
+
         ServerSocket server = null;
         System.out.println(System.getenv("$PORT"));
         System.out.println(port);
