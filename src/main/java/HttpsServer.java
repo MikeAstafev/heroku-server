@@ -7,20 +7,15 @@ import java.util.Properties;
 
 public class HttpsServer
 {
-    static int port = 1337;
+    static int port = 0;
     public static void main(String[] args) throws Throwable {
         //try to create server with port '8080'
-        Properties prop = new Properties();
-        String str = prop.getProperty("-Dserver.port");
-        System.out.println(System.getenv("PORT"));
-        System.out.println("\n" + str);
+        port = Integer.parseInt(System.getenv("PORT"));
 
         ServerSocket server = null;
-        System.out.println(System.getenv("$PORT"));
-        System.out.println(port);
         //creating server socket on port 8080
         try {
-            server = new ServerSocket(8080, 0);
+            server = new ServerSocket(port, 0);
             System.out.println("Server started on port: " + server.getLocalPort() + "\n");
         } catch (IOException ex) {
             System.out.println("Port " + port + " is blocked.");
