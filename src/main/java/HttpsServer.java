@@ -12,7 +12,8 @@ public class HttpsServer
         //try to create server with port '8080'
         Properties prop = new Properties();
         String str = prop.getProperty("-Dserver.port");
-        System.out.println(str);
+        System.out.println(System.getenv("PORT"));
+        System.out.println("\n" + str);
 
         ServerSocket server = null;
         System.out.println(System.getenv("$PORT"));
