@@ -11,7 +11,7 @@ public class HttpsServer
     public static void main(String[] args) throws Throwable {
         //try to create server with port '8080'
         Properties prop = new Properties();
-        String str = prop.getProperty("$PORT");
+        String str = prop.getProperty("server.port");
         System.out.println(str);
 
         ServerSocket server = null;
