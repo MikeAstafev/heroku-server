@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class HttpsServer
 {
-    static int port = Integer.parseInt(System.getenv("$PORT"));
+    static int port = 1337;
     public static void main(String[] args) throws Throwable {
         //try to create server with port '8080'
         Properties prop = new Properties();
