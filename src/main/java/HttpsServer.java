@@ -10,7 +10,7 @@ public class HttpsServer
     static int port = 8080;
     public static void main(String[] args) throws Throwable {
         //try to create server with port '8080'
-        //port = Integer.parseInt(System.getenv("PORT"));
+        port = Integer.parseInt(System.getenv("PORT"));
 
         ServerSocket server = null;
         //creating server socket on port 8080
