@@ -28,6 +28,7 @@ public class HttpsServer
                 Socket client = server.accept();
                 //print if connected
                 System.out.println("New connection accepted from " + client.getInetAddress());
+                System.out.println("Port " + port + " is blocked.");
                 ClientSession session = new ClientSession(client);
                 new Thread(session).start();
             } catch (IOException ex) {
