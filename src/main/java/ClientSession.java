@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.StringTokenizer;
 import java.net.Socket;
 import java.util.Date;
-import org.json.simple.JSONObject;
+//import org.json.simple.JSONObject;
 
 //checking client response
 
@@ -80,11 +80,14 @@ public class ClientSession implements Runnable
 
     private void responseGET(String response)
     {
-        JSONObject getresp = new JSONObject();
-        getresp.put("name", "Аэрофлот");
-        getresp.put("id", "1");
-        getresp.put("logoURL","https://upload.wikimedia.org/wikipedia/ru/a/a1/Aeroflot_logo.svg");
-        response = getresp.toJSONString();
+        response = "{ ";
+        response += "name: S7, id: 1, logoURL: https://upload.wikimedia.org/wikipedia/ru/a/a1/Aeroflot_logo.svg";
+
+//        JSONObject getresp = new JSONObject();
+//        getresp.put("name", "Аэрофлот");
+//        getresp.put("id", "1");
+//        getresp.put("logoURL","https://upload.wikimedia.org/wikipedia/ru/a/a1/Aeroflot_logo.svg");
+        //response = getresp.toJSONString();
     }
 
     private void responsePOST(String response)
