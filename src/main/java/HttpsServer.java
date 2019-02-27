@@ -7,10 +7,10 @@ import java.util.Properties;
 
 public class HttpsServer
 {
-    static int port = 0;
+    static int port = 8080;
     public static void main(String[] args) throws Throwable {
         //try to create server with port '8080'
-        port = Integer.parseInt(System.getenv("PORT"));
+        //port = Integer.parseInt(System.getenv("PORT"));
 
         ServerSocket server = null;
         //creating server socket on port 8080
@@ -27,7 +27,7 @@ public class HttpsServer
                 System.out.println("Waiting for connection...");
                 Socket client = server.accept();
                 //print if connected
-                System.out.println("Connection accepted.");
+                System.out.println("New connection accepted from " + client.getInetAddress());
                 ClientSession session = new ClientSession(client);
                 new Thread(session).start();
             } catch (IOException ex) {
